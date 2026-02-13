@@ -74,7 +74,7 @@ func ListContacts(phonebook []Contact) {
 func DeleteContact(name string, phonebook []Contact) ([]Contact, error) {
 	for i, c :=range phonebook {
 		if c.Name == name {
-			phonebook = append(phonebook[:i], phonebook[i+1:]。。。)
+			phonebook = append(phonebook[:i], phonebook[i+1:]...)
 			return phonebook, nil
 		}
 	}

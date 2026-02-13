@@ -18,7 +18,7 @@
 - [x] Structs — modeling a `URL` or `User` entity
 - [x] Pointers — when and why (receiver methods)
 - [x] Error handling — Go's explicit `if err != nil` philosophy
-- [ ] **Exercise**: In-memory phonebook (struct + map + CRUD functions)
+- [x] **Exercise**: In-memory phonebook (struct + map + CRUD functions)
 - [x] **Output**: `projects/go-refresher/day01-fundamentals/main.go`
 - [x] **Notes**: `notes/go-01-fundamentals.md`
 

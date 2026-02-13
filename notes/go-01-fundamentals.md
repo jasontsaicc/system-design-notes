@@ -1,6 +1,6 @@
 # Go Day -5: Types, Structs, Error Handling
 
-> Status: 🔄 In progress (Struct, Method, Error Handling, Pointers done — Phonebook CRUD pending)
+> Status: ✅ Complete
 
 ---
 
@@ -170,3 +170,12 @@ func (c *Contact) UpdatePhone(newPhone string) { c.Phone = newPhone }
 - **類型 vs 變數**：`Contact`（藍圖）≠ `c`（實例）— 出現 3 次同樣的錯
 - **回傳值數量**：簽名寫幾個就回傳幾個，成功和失敗都要
 - **語法細節**：大小寫、`=` vs `==`、英文符號
+- **`=` vs `==`**：CRUD 練習又犯了一次（`if err = nil`），要特別注意
+- **`...` 語法**：append 接 slice 時要加 `...` 展開
+
+### CRUD 練習新錯誤
+| What I Thought | Reality | Why I Was Wrong |
+|---|---|---|
+| `if err = nil` 做比較 | 要用 `==`，`=` 是賦值 | 同一天第二次犯，`=` vs `==` 是最大痛點 |
+| `err != nil` 代表找到重複 | `err == nil` 才是找到（沒錯誤 = 成功找到） | 混淆了 FindContact 的角度和 AddContact 的角度 |
+| `append(phonebook[:i], phonebook[i+1:])` 不加 `...` | 要加 `...` 展開 slice | `append` 接 slice 需要 `...` 拆開，是固定語法 |
