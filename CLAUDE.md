@@ -56,7 +56,7 @@
 
 ### G. 更新進度 + 預覽明天（5 min）
 
-- 更新 `notes/curriculum-roadmap.md` 對應 Day 的 Done 欄位：⬜ → ✅
+- 更新 `docs/curriculum-roadmap.md` 對應 Day 的 Done 欄位：⬜ → ✅
 - 更新 `CURRICULUM.md` 對應的 checkbox：`- [ ]` → `- [x]`
 - 如果當天只完成一半（2-day topic 的 Day 1）：標記為 🔄
 - 簡單預覽明天的 topic，讓大腦開始 warm up

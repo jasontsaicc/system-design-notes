@@ -1,6 +1,6 @@
 # Go Day -4: Slices, Maps, Interfaces
 
-> Status: 🔄 In progress (核心教學完成，Exercise KV Store 待完成)
+> Status: ✅ Completed
 
 ---
 
@@ -128,11 +128,20 @@ m["key"] = "val"             // safe
 | `NewMemoryStore()` 不知道在幹嘛（問了兩次） | 初始化 struct 內部的 map，避免 nil map panic | 不知道 Go 的 map 必須 `make` 才能寫入 |
 | `data` 打成 `date` | 欄位名是 `data` | 粗心拼字錯誤 |
 | 不確定為什麼 `Delete` 的 `bool` 不用括號 | 回傳 1 個值不用括號，2 個以上才要 `()` | 沒注意到 Go 的語法規則：多值回傳才加括號 |
+| nil map 以為是 `{}`（空 map） | nil map 是 `nil`，不是空 map。讀 nil map 不會 panic，寫才會 | 沒區分「沒有桌子」(nil) 和「空桌子」(empty map) |
+| Method 語法寫成 `func (s MemoryStore) Get() int` | 要 `func (s *MemoryStore) Get(key string) (string, bool)` — 指標 receiver + 參數 + 回傳都要跟 interface 一致 | 不熟悉 Go method 語法，receiver/參數/回傳三個都寫錯 |
+| Set 寫成 `value = s.data[key]`（方向反了） | 應該是 `s.data[key] = value`，`=` 左邊是被改的目標 | 搞混了讀取和寫入的方向 |
+| 宣告了變數 `val` 但沒用到 | Go 不允許 unused variable，不需要的值用 `_` 忽略 | 不知道 Go 的嚴格規則：宣告了就必須用 |
+| `fmt.Println` 沒把變數放進去 | 要印變數就要放進 Println 的參數裡 | 語法不熟 |
+| 用 `val, ok` 但沒先用 `:=` 宣告 | 變數要先用 `:=` 接住 function 回傳值才能用 | 忘了 Go 要先宣告變數 |
+| Voice Drill: Q1 只講了 Slice，漏了 Map 和 Interface | 回答要涵蓋所有被問到的東西 | 練習時不夠完整 |
+| Voice Drill: nil map 讀 vs 寫行為沒分清 | 讀 nil map → 回傳 zero value（不 panic），寫 nil map → panic | 只記得「不能用」但沒分清讀和寫的差異 |
 
 ---
 
-## 📋 Exercise: KV Store（待完成）
+## 📋 Exercise: KV Store（✅ 完成）
 
-- [ ] 實作 `Get`、`Set`、`Delete` 三個 method
-- [ ] 寫 `main()` 測試
-- [ ] 確認滿足 `Store` interface
+- [x] 實作 `Get`、`Set`、`Delete` 三個 method
+- [x] 寫 `main()` 測試（3 場景：Set→Get、Get 不存在、Delete→Get 確認消失）
+- [x] 確認滿足 `Store` interface
+- Output: `projects/go-refresher/day02-data-structures/main.go`

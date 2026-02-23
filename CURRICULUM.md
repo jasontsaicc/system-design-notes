@@ -24,12 +24,12 @@
 
 ### Day -4: Slices, Maps, Interfaces — Core Data Structures
 **Goal**: Comfortable with Go's most-used data structures + polymorphism
-- [ ] Slices vs arrays — capacity, append, gotchas
-- [ ] Maps — Go's hash tables (directly relevant to SD!)
-- [ ] Interfaces — implicit implementation, why it matters
-- [ ] **Exercise**: Key-value store with `Get/Set/Delete` satisfying a `Store` interface
-- [ ] **Output**: `projects/go-refresher/day02-data-structures/`
-- [ ] **Notes**: `notes/go-02-data-structures.md`
+- [x] Slices vs arrays — capacity, append, gotchas
+- [x] Maps — Go's hash tables (directly relevant to SD!)
+- [x] Interfaces — implicit implementation, why it matters
+- [x] **Exercise**: Key-value store with `Get/Set/Delete` satisfying a `Store` interface
+- [x] **Output**: `projects/go-refresher/day02-data-structures/`
+- [x] **Notes**: `notes/go-02-data-structures.md`
 
 ### Day -3: Goroutines & Channels — Concurrency Foundations
 **Goal**: Understand Go's concurrency model (critical for SD topics)
