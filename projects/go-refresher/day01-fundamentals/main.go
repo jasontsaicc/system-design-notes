@@ -34,15 +34,7 @@ func FindContact(name string, phonebook []Contact) (Contact, error) {
 	return Contact{}, fmt.Errorf("contact %s not found", name)
 }
 
-// TODO(human): Implement AddContact
-// Add a new contact to the phonebook.
-// - If a contact with the same name already exists, return an error
-// - If not, append the new contact and return the updated phonebook
-//
-// Hints:
-//   - Use FindContact to check if name already exists
-//   - append(slice, item) returns a NEW slice with the item added
-//   - Return type: ([]Contact, error)
+// AddContact adds a new contact to the phonebook, returns error if name already exists
 func AddContact(name string, phone string, phonebook []Contact) ([]Contact, error) {
 	_, err := FindContact(name, phonebook)
 	if err == nil {
@@ -61,16 +53,7 @@ func ListContacts(phonebook []Contact) {
 	fmt.Println("=================")
 }
 
-// TODO(human): Implement DeleteContact
-// Remove a contact from the phonebook by name.
-// - If the contact doesn't exist, return an error
-// - If found, remove it and return the updated phonebook
-//
-// Hints:
-//   - Use a loop to find the index (position) of the contact
-//   - To remove item at index i from a slice:
-//     phonebook = append(phonebook[:i], phonebook[i+1:]...)
-//   - Return type: ([]Contact, error)
+// DeleteContact removes a contact by name, returns error if not found
 func DeleteContact(name string, phonebook []Contact) ([]Contact, error) {
 	for i, c :=range phonebook {
 		if c.Name == name {
