@@ -33,13 +33,13 @@
 
 ### Day -3: Goroutines & Channels — Concurrency Foundations
 **Goal**: Understand Go's concurrency model (critical for SD topics)
-- [ ] Goroutines — lightweight threads, `go` keyword
-- [ ] Channels — communication between goroutines
-- [ ] `sync.WaitGroup`, `sync.Mutex` — coordination primitives
-- [ ] **SD Connection**: Every SD system has concurrent components (multiple users, async processing)
-- [ ] **Exercise**: Producer-Consumer pattern (maps to Message Queue concepts in Phase 1)
-- [ ] **Output**: `projects/go-refresher/day03-concurrency/`
-- [ ] **Notes**: `notes/go-03-concurrency.md`
+- [x] Goroutines — lightweight threads, `go` keyword
+- [x] Channels — communication between goroutines
+- [x] `sync.WaitGroup`, `sync.Mutex` — coordination primitives
+- [x] **SD Connection**: Every SD system has concurrent components (multiple users, async processing)
+- [x] **Exercise**: Producer-Consumer pattern (maps to Message Queue concepts in Phase 1)
+- [x] **Output**: `projects/go-refresher/day03-concurrency/`
+- [x] **Notes**: `notes/go-03-concurrency.md`
 
 ### Day -2: HTTP Server & JSON — Building APIs in Go
 **Goal**: Build a simple REST API (backbone of every SD PoC)
