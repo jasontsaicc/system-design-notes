@@ -1,11 +1,5 @@
 # Go Day -5: Types, Structs, Error Handling
 
-<<<<<<< HEAD
-> Status: ✅ Complete
-=======
-> Status: ✅ Completed
->>>>>>> d358029 (update day02)
-
 ---
 
 ## 📝 One-liner
@@ -220,7 +214,6 @@ if err == nil {  // 找得到 = 已存在 = 不能重複加
 | Q3: `u.name = name` + `return User` | 大小寫 + `==` + 類型 vs 變數 | ⚠️ 需提示 | 認得出錯誤但不能立即反應 |
 | Q4: `return fmt.Errorf(...)` 少回傳值 | 回傳值數量 | ⚠️ 需引導 | 知道要回傳 2 個，但沒看出哪行少了 |
 
-<<<<<<< HEAD
 ### 下次重點複習
 - **類型 vs 變數**：`Contact`（藍圖）≠ `c`（實例）— 出現 3 次同樣的錯
 - **回傳值數量**：簽名寫幾個就回傳幾個，成功和失敗都要
@@ -234,7 +227,6 @@ if err == nil {  // 找得到 = 已存在 = 不能重複加
 | `if err = nil` 做比較 | 要用 `==`，`=` 是賦值 | 同一天第二次犯，`=` vs `==` 是最大痛點 |
 | `err != nil` 代表找到重複 | `err == nil` 才是找到（沒錯誤 = 成功找到） | 混淆了 FindContact 的角度和 AddContact 的角度 |
 | `append(phonebook[:i], phonebook[i+1:])` 不加 `...` | 要加 `...` 展開 slice | `append` 接 slice 需要 `...` 拆開，是固定語法 |
-=======
 ---
 
 ## 📌 面試怎麼回答
@@ -246,4 +238,3 @@ if err == nil {  // 找得到 = 已存在 = 不能重複加
 > **Q: Value receiver 跟 Pointer receiver 差在哪？**
 >
 > Value receiver 拿到的是複製品，只能讀；Pointer receiver 拿到的是原件的地址，可以修改。經驗法則：需要 mutate state 的用 pointer，純讀取的用 value。
->>>>>>> d358029 (update day02)
