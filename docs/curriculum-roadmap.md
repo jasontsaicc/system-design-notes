@@ -106,7 +106,7 @@ graph LR
 | -4 | Slices, Maps, Interfaces | Master core data structures | `projects/go-refresher/day02-data-structures/` | ✅ |
 | -3 | Goroutines & Channels | Understand concurrency model | `projects/go-refresher/day03-concurrency/` | ✅ |
 | -2 | HTTP Server & JSON | Build REST API | `projects/go-refresher/day04-http-server/` | ✅ |
-| -1 | Testing & Docker | Test + containerize | `projects/go-refresher/day05-testing-docker/` | ⬜ |
+| -1 | Testing & Docker | Test + containerize | `projects/go-refresher/day05-testing-docker/` | ✅ |
 
 ### Phase 0: Thinking Framework (Day 1-3)
 

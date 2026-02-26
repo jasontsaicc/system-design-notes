@@ -44,7 +44,7 @@
 ### Day -2: HTTP Server & JSON — Building APIs in Go
 **Goal**: Build a simple REST API (backbone of every SD PoC)
 - [x] `net/http` — handlers, routes, middleware concept
-- [ ] `context.Context` — request-scoped values, cancellation, timeouts (used in every HTTP handler)
+- [x] `context.Context` — request-scoped values, cancellation, timeouts (used in every HTTP handler)
 - [x] JSON marshal/unmarshal with struct tags
 - [x] Request parsing (query params, path params, body)
 - [x] **Exercise**: REST API for the KV store (GET/PUT/DELETE `/keys/:key`)
@@ -53,13 +53,13 @@
 
 ### Day -1: Testing & Docker — Making PoCs Real
 **Goal**: Test code and containerize it
-- [ ] `go test` — table-driven tests (Go convention)
-- [ ] Benchmarking with `go test -bench`
-- [ ] Dockerfile for Go apps (multi-stage build)
-- [ ] Docker Compose basics
-- [ ] **Exercise**: Add tests to KV store API + Dockerize it
-- [ ] **Output**: `projects/go-refresher/day05-testing-docker/`
-- [ ] **Notes**: `notes/go-05-testing-docker.md`
+- [x] `go test` — table-driven tests (Go convention)
+- [x] Benchmarking with `go test -bench`
+- [x] Dockerfile for Go apps (multi-stage build)
+- [x] Docker Compose basics
+- [x] **Exercise**: Add tests to KV store API + Dockerize it
+- [x] **Output**: `projects/go-refresher/day05-testing-docker/`
+- [x] **Notes**: `notes/go-05-testing-docker.md`
 
 ---
 

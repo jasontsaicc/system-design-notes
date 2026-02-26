@@ -19,7 +19,7 @@ type MemoryStore struct {
 
 func NewMemoryStore() *MemoryStore {
 	return &MemoryStore{
-		data: make(map[string]string)
+		data: make(map[string]string),
 	}
 }
 
