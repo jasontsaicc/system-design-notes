@@ -66,33 +66,33 @@
 ## Phase 0: Thinking Framework (Day 1-3)
 
 ### Day 1: What SD Interviews Actually Test
-- [ ] Understand the 4 scoring dimensions (Problem Navigation, Design, Technical Depth, Trade-offs)
-- [ ] Analyze good vs bad answers for the same question
-- [ ] **Discussion**: Deconstruct a real SD interview rubric
-- [ ] **Notes**: `notes/day01-interview-rubric.md`
+- [x] Understand the 4 scoring dimensions (Problem Navigation, Design, Technical Depth, Trade-offs)
+- [x] Analyze good vs bad answers for the same question
+- [x] **Discussion**: Deconstruct a real SD interview rubric
+- [x] **Notes**: `notes/day01-interview-rubric.md`
 
 ### Day 2: Back-of-Envelope Estimation
-- [ ] Powers of 2, latency numbers every engineer should know
-- [ ] Practice: Estimate YouTube daily storage, Twitter QPS
-- [ ] **PoC**: Build an estimation cheat sheet you actually understand
-- [ ] **Notes**: `notes/day02-estimation.md`
+- [x] Powers of 2, latency numbers every engineer should know
+- [x] Practice: Estimate YouTube daily storage, Twitter QPS
+- [x] **PoC**: Build an estimation cheat sheet you actually understand
+- [x] **Notes**: `notes/day02-estimation.md`
 
 ### Day 3: Your SD Answer Framework (4-Step Method)
-- [ ] Step 1: Clarify requirements & scope (functional + non-functional)
-- [ ] Step 2: High-level design (API + data model + architecture)
-- [ ] Step 3: Deep dive into core components
-- [ ] Step 4: Scale, trade-offs, monitoring
-- [ ] **Time budget for 45-min SD interview**:
+- [x] Step 1: Clarify requirements & scope (functional + non-functional)
+- [x] Step 2: High-level design (API + data model + architecture)
+- [x] Step 3: Deep dive into core components
+- [x] Step 4: Scale, trade-offs, monitoring
+- [x] **Time budget for 45-min SD interview**:
   - [0-5 min] Clarify requirements & scope (DO NOT SKIP)
   - [5-10 min] Back-of-envelope estimation (if needed)
   - [10-20 min] High-level design (API + data model + architecture diagram)
   - [20-35 min] Deep dive into 1-2 core components (interviewer may guide)
   - [35-45 min] Scale, trade-offs, monitoring, failure handling
-- [ ] **Handling unknown problems**: Decompose into known building blocks
+- [x] **Handling unknown problems**: Decompose into known building blocks
   - Every system = Storage + API + unique domain logic
   - Practice: "Design a parking lot" → Database + Rate Limiting + API Design
-- [ ] **Scope negotiation**: "I'll focus on X. Should I also cover Y, or dive deeper into X?"
-- [ ] **Standard Whiteboard Diagram Template** — use this 8-block skeleton for EVERY design:
+- [x] **Scope negotiation**: "I'll focus on X. Should I also cover Y, or dive deeper into X?"
+- [x] **Standard Whiteboard Diagram Template** — use this 8-block skeleton for EVERY design:
   ```
   Client → DNS → LB → API Server → Cache → Database
                                   ↘ Queue → Worker
@@ -101,10 +101,10 @@
   - Consistent layout = readable by interviewer in 5 seconds
   - Annotate each arrow with protocol/data: `HTTP`, `gRPC`, `async`, `pub/sub`
   - Highlight the "interesting" blocks for this specific problem (bold/color/star)
-- [ ] Common diagram components: boxes, arrows, databases, queues, caches
-- [ ] Practice: Draw "Design URL Shortener" architecture in 5 minutes using the standard template
-- [ ] **Practice**: Answer "Design URL Shortener" using the framework (dry run)
-- [ ] **Notes**: `notes/day03-framework.md`
+- [x] Common diagram components: boxes, arrows, databases, queues, caches
+- [x] Practice: Draw "Design URL Shortener" architecture in 5 minutes using the standard template
+- [x] **Practice**: Answer "Design URL Shortener" using the framework (dry run)
+- [x] **Notes**: `notes/day03-framework.md`
 
 ---
 

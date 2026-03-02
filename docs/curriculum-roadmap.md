@@ -112,9 +112,9 @@ graph LR
 
 | Day | Topic | Goal | Output | Done |
 |-----|-------|------|--------|------|
-| 1 | SD Interview Rubric | Understand 4 scoring dimensions | `notes/day01-interview-rubric.md` | ⬜ |
-| 2 | Back-of-Envelope Estimation | Master estimation techniques | `notes/day02-estimation.md` | ⬜ |
-| 3 | 4-Step Answer Framework | Build structured answer method | `notes/day03-framework.md` | ⬜ |
+| 1 | SD Interview Rubric | Understand 4 scoring dimensions | `notes/day01-interview-rubric.md` | ✅ |
+| 2 | Back-of-Envelope Estimation | Master estimation techniques | `notes/day02-estimation.md` | ✅ |
+| 3 | 4-Step Answer Framework | Build structured answer method | `notes/day03-framework.md` | ✅ |
 
 ### Phase 1: Building Blocks (Day 4-16)
 
