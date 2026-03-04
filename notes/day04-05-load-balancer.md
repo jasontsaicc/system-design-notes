@@ -1,6 +1,6 @@
 # Day 04-05: Load Balancer & Reverse Proxy
 
-> Status: 🔄 進行中（Day 4 概念完成，Day 5 PoC 待做）
+> Status: 🔄 進行中（Day 4 概念 ✅，Day 5 PoC 進行中 — 剩 load test）
 
 ---
 
@@ -117,6 +117,33 @@ Browser Cache → OS Cache → Recursive Resolver → Root Server → TLD (.com)
 | SLO | 99.95% availability |
 | Alert | 5xx error rate 的 burn-rate |
 | Dashboard | Active connections、request rate、response time（P50/P99） |
+
+---
+
+## Day 5 PoC 實驗紀錄
+
+### 架構
+```
+Client → Nginx L4 (port 8082) → app1, app2, app3
+Client → Nginx L7 (port 8081) → app1, app2, app3
+```
+- Go app：3 個 endpoint（`/`, `/health`, `/metrics`）+ failure injection（`FAIL_RATE` env var）
+- 程式碼：`projects/load-balancer/`
+
+### 實驗 1：L7 Path Routing ✅
+- L7 打 `/api` → response header 有 `X-Route: api-backend`（Nginx `location /api` 加的）
+- L4 打 `/api` → **沒有** `X-Route` header
+- **結論**：L4 用 `stream` block，只看 TCP，不拆 HTTP → 無法做 path routing。L7 用 `http` block，能看 URL path。
+
+### 實驗 2：Failure Injection ✅
+- 設定 app1 `FAIL_RATE=0.5`（50% 回 500）
+- Nginx **仍然把 request 分給 app1** — 因為預設只做 TCP health check，不看 HTTP status code
+- **結論**：Nginx 預設不會因 500 移除 server。Production 要設 health check path + unhealthy threshold（ALB 會做）
+
+### 實驗 3：Load Test ⬜
+- 待做：用 `hey` 壓測比較 L4 vs L7 latency
+- 安裝指令：`go install github.com/rakyll/hey@latest`
+- 壓測指令：`~/go/bin/hey -n 1000 -c 50 http://localhost:8081/`
 
 ---
 
