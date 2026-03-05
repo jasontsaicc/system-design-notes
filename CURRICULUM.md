@@ -120,15 +120,15 @@
 > | **Dashboards** | 3 graphs: throughput (QPS), latency distribution, error rate |
 
 ### Day 4-5: Load Balancer & Reverse Proxy
-- [ ] DNS fundamentals — resolution flow, TTL, A/AAAA/CNAME records
-- [ ] DNS-based load balancing: Route 53 weighted, latency-based, failover routing
-- [ ] L4 vs L7 load balancing — when to use which
-- [ ] Algorithms: Round Robin, Least Connections, IP Hash, Weighted
-- [ ] Health checks, sticky sessions, connection draining
-- [ ] 🔧 **DevOps Angle**: ALB vs NLB real-world differences, target group health checks
-- [ ] **📡 Observability Mini**: SLI = backend healthy %; SLO = 99.95% avail; Alert = burn-rate on 5xx; Dashboard = active connections, request rate, response time
-- [ ] **PoC**: Nginx L4/L7 LB with Docker Compose, observe behavior difference
-- [ ] **Notes**: `notes/day04-05-load-balancer.md`
+- [x] DNS fundamentals — resolution flow, TTL, A/AAAA/CNAME records
+- [x] DNS-based load balancing: Route 53 weighted, latency-based, failover routing
+- [x] L4 vs L7 load balancing — when to use which
+- [x] Algorithms: Round Robin, Least Connections, IP Hash, Weighted
+- [x] Health checks, sticky sessions, connection draining
+- [x] 🔧 **DevOps Angle**: ALB vs NLB real-world differences, target group health checks
+- [x] **📡 Observability Mini**: SLI = backend healthy %; SLO = 99.95% avail; Alert = burn-rate on 5xx; Dashboard = active connections, request rate, response time
+- [x] **PoC**: Nginx L4/L7 LB with Docker Compose, observe behavior difference
+- [x] **Notes**: `notes/day04-05-load-balancer.md`
 
 ### Day 6-7: Caching & CDN Strategies
 - [ ] Cache levels: Browser → CDN → App → DB

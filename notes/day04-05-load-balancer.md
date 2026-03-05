@@ -1,6 +1,6 @@
 # Day 04-05: Load Balancer & Reverse Proxy
 
-> Status: 🔄 進行中（Day 4 概念 ✅，Day 5 PoC 進行中 — 剩 load test）
+> Status: ✅ 完成
 
 ---
 
@@ -140,10 +140,18 @@ Client → Nginx L7 (port 8081) → app1, app2, app3
 - Nginx **仍然把 request 分給 app1** — 因為預設只做 TCP health check，不看 HTTP status code
 - **結論**：Nginx 預設不會因 500 移除 server。Production 要設 health check path + unhealthy threshold（ALB 會做）
 
-### 實驗 3：Load Test ⬜
-- 待做：用 `hey` 壓測比較 L4 vs L7 latency
-- 安裝指令：`go install github.com/rakyll/hey@latest`
-- 壓測指令：`~/go/bin/hey -n 1000 -c 50 http://localhost:8081/`
+### 實驗 3：Load Test ✅
+- 用 `hey` 壓測：`~/go/bin/hey -n 1000 -c 50 http://localhost:<port>/`
+- 結果：
+
+| Metric | L4 (port 8082) | L7 (port 8081) |
+|--------|---------------|----------------|
+| Requests/sec | ~4,465 | ~2,317 |
+| Avg latency | ~9.6ms | ~20.1ms |
+| P99 latency | ~32ms | ~59ms |
+
+- **結論**：L4 約 2x faster，因為不需要 parse HTTP。L7 較慢但能做 path-based routing。
+- **Trade-off**：速度 vs 路由能力。Microservices 需要 L7，pure TCP throughput 用 L4。
 
 ---
 
@@ -157,6 +165,9 @@ Client → Nginx L7 (port 8081) → app1, app2, app3
 | microservices I would like use L7 LB, because need use path routing | For microservices, I would use an L7 load balancer because we need path-based routing to direct requests to different services. |
 | like game server and is million level connections and latency need very fast I would like use L4 LB | For a game server handling millions of concurrent TCP connections with ultra-low latency requirements, I would use an L4 load balancer since we don't need HTTP parsing. |
 | use sticky session in cookie write serverid or can use external session store like Redis, this is the stateless approach | Two solutions: use sticky sessions with a server ID cookie to pin users to the same server, or better — use an external session store like Redis so all servers share session state. The Redis approach is the stateless design, which is preferred. |
+| if need use path routing like microservice need use L7 | If we need path-based routing, like in a microservices architecture, we need to use L7. |
+| L4 ok i get it like aws nlb | L4 supports static IP — like AWS NLB which supports Elastic IP. |
+| sticky sessions can keep user on the same backend, but can use external session store like redis let client always to same session store do stateless | Sticky sessions keep users on the same backend, but if that server goes down, the session is lost. A better approach is using an external session store like Redis so all servers share state — this is the stateless design. |
 
 ---
 
@@ -168,3 +179,6 @@ Client → Nginx L7 (port 8081) → app1, app2, app3
 | Request 處理時間不同 → 用 Weighted Round Robin | Weighted 是給 server 規格不同用的（靜態），處理時間不同要用 Least Connections（動態） | 混淆了「server 能力不同」和「request 負載不同」兩種情境 |
 | Simon Drill 完全想不起 LB Algorithms | 四個 algorithm 各有明確 use case，要記住名字 + 適用場景 | 只理解了概念但沒記住名字，recall 時腦袋一片空白 |
 | DNS-based LB 缺點想不起來 | TTL cache 導致 stale IP，DNS 沒有 real-time health check | 只記住了 Route 53 的 routing policies，沒記住 limitation |
+| 8.8.8.8 是 ISP 的 DNS | 8.8.8.8 是 Google Public DNS resolver，ISP 有自己的 resolver | 混淆了 recursive resolver 的來源，8.8.8.8 是公開的，ISP resolver 是另一個 |
+| Sticky session 和 Redis 是同一種做法 | Sticky session 用 cookie 綁定 server（有風險），Redis 是 external store 做 stateless（替代方案）| 兩個是相反的策略，不是同一件事 |
+| Sticky session 唯一風險是 session loss | 還有 uneven load distribution — heavy users 被 pin 住導致某些 server 過載 | 只想到 server 掛掉的情況，沒想到 load imbalance |
