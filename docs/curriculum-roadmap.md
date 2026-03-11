@@ -121,7 +121,7 @@ graph LR
 | Day | Topic | Goal | PoC | Notes | Done |
 |-----|-------|------|-----|-------|------|
 | 4-5 | Load Balancer & Reverse Proxy | DNS + L4 vs L7, algorithms | Nginx LB + Docker Compose | `day04-05-load-balancer.md` | ✅ |
-| 6-7 | Caching & CDN Strategies | Patterns + CDN + invalidation | Redis cache layer | `day06-07-caching.md` | 🔄 |
+| 6-7 | Caching & CDN Strategies | Patterns + CDN + invalidation | Redis cache layer | `day06-07-caching.md` | ✅ |
 | 8-9 | Database Selection | SQL vs NoSQL + pooling/WAL | Same problem, 2 DBs | `day08-09-database.md` | ⬜ |
 | 10-11 | Message Queue & Async | Semantics + DLQ + retry | Producer-consumer | `day10-11-message-queue.md` | ⬜ |
 | 12-13 | API Design | REST/gRPC/GraphQL + pagination | Small API impl | `day12-13-api-design.md` | ⬜ |

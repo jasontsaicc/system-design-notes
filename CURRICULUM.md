@@ -131,18 +131,18 @@
 - [x] **Notes**: `notes/day04-05-load-balancer.md`
 
 ### Day 6-7: Caching & CDN Strategies
-- [ ] Cache levels: Browser → CDN → App → DB
-- [ ] Patterns: Cache-Aside, Write-Through, Write-Behind, Read-Through
-- [ ] Eviction: LRU, LFU, TTL
-- [ ] Cache invalidation — the hard problem
-- [ ] CDN deep dive: Edge caching vs Origin pull
-- [ ] Pull CDN vs Push CDN — trade-off
-- [ ] CDN cache invalidation strategies (TTL, purge, versioned URLs)
-- [ ] 🔧 **DevOps Angle**: ElastiCache cluster mode vs non-cluster, operational gotchas
-- [ ] 🔧 **DevOps Angle**: CloudFront behaviors, origin shield, cache hit ratio monitoring
-- [ ] **📡 Observability Mini**: SLI = cache hit ratio, origin latency; SLO = hit ratio > 90%, P99 < 50ms; Alert = hit ratio drop > 10% in 5min; Dashboard = hit/miss ratio, eviction rate, memory usage
-- [ ] **PoC**: Redis cache layer, measure latency with/without cache
-- [ ] **Notes**: `notes/day06-07-caching.md`
+- [x] Cache levels: Browser → CDN → App → DB
+- [x] Patterns: Cache-Aside, Write-Through, Write-Behind, Read-Through
+- [x] Eviction: LRU, LFU, TTL
+- [x] Cache invalidation — the hard problem
+- [x] CDN deep dive: Edge caching vs Origin pull
+- [x] Pull CDN vs Push CDN — trade-off
+- [x] CDN cache invalidation strategies (TTL, purge, versioned URLs)
+- [x] 🔧 **DevOps Angle**: ElastiCache cluster mode vs non-cluster, operational gotchas
+- [x] 🔧 **DevOps Angle**: CloudFront behaviors, origin shield, cache hit ratio monitoring
+- [x] **📡 Observability Mini**: SLI = cache hit ratio, origin latency; SLO = hit ratio > 90%, P99 < 50ms; Alert = hit ratio drop > 10% in 5min; Dashboard = hit/miss ratio, eviction rate, memory usage
+- [x] **PoC**: Redis cache layer, measure latency with/without cache
+- [x] **Notes**: `notes/day06-07-caching.md`
 
 ### Day 8-9: Database Selection
 - [ ] SQL (PostgreSQL) vs NoSQL (DynamoDB/MongoDB) vs NewSQL (CockroachDB)
