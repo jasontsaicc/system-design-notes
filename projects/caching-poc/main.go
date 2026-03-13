@@ -94,7 +94,7 @@ func handleMetrics(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, `{"hits":%d,"misses":%d,"total":%d,"hit_ratio":"%.1f%%"}`, hits, misses, total, hitRatio)
 }
 
-// simulateDB fakes a slow database query
+// simulateDB fakesf a slow database query
 func simulateDB(id string) string {
 	time.Sleep(dbLatency)
 	return fmt.Sprintf("db-record-for-%s", id)

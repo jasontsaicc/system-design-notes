@@ -541,14 +541,15 @@
 ## Daily Routine
 
 ```
-A. [5 min]  複習 — Review yesterday's notes + check mistakes
-B. [3 min]  引入 — Daily topic intro (analogy / scenario)
-C. [12 min] 核心教學 — Topic discussion, Feynman method (理解確認穿插其中)
-D. [20 min] 動手做 — Hands-on PoC or design exercise
-E. [5 min]  Voice Drill — Record yourself: Recall 元素 (play back, refine)
-F. [5 min]  整理筆記 — Write notes (using Notes Template)
-G. [5 min]  更新進度 — Update progress + preview tomorrow
-     Total ≈ 55 min（留 5 min buffer）
+A. [5 min]   複習 — Review yesterday's notes + check mistakes
+B. [3 min]   引入 — Daily topic intro (analogy / scenario)
+C. [12 min]  核心教學 — Topic discussion, Feynman method (理解確認穿插其中)
+D. [20 min]  動手做 — Hands-on PoC or design exercise
+E. [5 min]   Simon Drill — Self recall + AI challenge on chunks
+F. [10-15 min] Interview Drill — Mini SD mock: AI 出題, 跑 full 4-step framework
+G. [5 min]   整理筆記 — Write notes (using Notes Template)
+H. [5 min]   更新進度 — Update progress + preview tomorrow
+     Total ≈ 65-70 min
 ```
 
 ---

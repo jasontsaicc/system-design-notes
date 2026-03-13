@@ -190,12 +190,12 @@ Total:    61 days + 5 prep days
 
 ## V5 Adjustments (2026-02-11) — 整體一致性修復
 
-> V1-V4 每輪迭代新增功能（Weekly Review、Notes Template、Teaching Flow、Voice Drill）之間沒有對齊。
+> V1-V4 每輪迭代新增功能（Weekly Review、Notes Template、Teaching Flow、Simon Drill）之間沒有對齊。
 > V5 聚焦於讓整個系統**自洽**，不增加天數或時間。
 
 | # | Issue | Fix | Impact |
 |---|-------|-----|--------|
-| 1 | Daily Routine vs Teaching Flow 時間不對齊（複習 10 min vs 2-3 min，Voice Drill 缺席） | CLAUDE.md 重寫 A-G 時間預算（5+3+12+20+5+5+5=55 min），CURRICULUM.md Daily Routine 同步對齊 | 時間加總一致 |
+| 1 | Daily Routine vs Teaching Flow 時間不對齊（複習 10 min vs 2-3 min，Simon Drill 缺席） | CLAUDE.md 重寫 A-H 時間預算（5+3+12+20+5+10~15+5+5=65-70 min），CURRICULUM.md Daily Routine 同步對齊 | 時間加總一致 |
 | 2 | Notes Template 放在 Phase 3 裡面，但所有 Phase 都要用；Interview Language Template 重疊 | Notes Template 移到 Phase 3 之前，分三層（基礎/進階/完整）；Interview Language Template 合併進去 | Single source of truth |
 | 3 | Weekly Review 6/6 計分在 Phase 0-2 不成立（Security/Capacity 還沒學） | 改為 phase-aware 計分表（Phase 0: 2/2, Phase 1: 4/4, Phase 2: 5/5, Phase 3+: 6/6） | 消除假警報 |
 | 4 | 進度追蹤有三個地方（頂部表格 + checkbox + roadmap）遲早脫 sync | 刪除 CURRICULUM.md 頂部 Progress Tracker 表格，保留 checkbox + roadmap 兩處 | 簡化為兩層 |

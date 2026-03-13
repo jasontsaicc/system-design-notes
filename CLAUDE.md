@@ -106,14 +106,33 @@ This curriculum combines two methods:
   - If student can't answer → go back to that chunk, re-drill until breakthrough
 - **Goal**: Every chunk passes both self-recall AND AI challenge = truly mastered
 
-### F. 整理筆記（5 min）
+### F. Interview Drill（10-15 min）
+
+> 模擬大廠 SD 面試情境，每天練習 4-step framework，累積面試肌肉記憶。
+
+- **AI 出題**：AI 給一個 mini system design 題目，今天學的 building block 是核心
+  - Phase 1-2 範例："Design a movie review site handling 50K reads/sec"（聚焦 caching）
+  - Phase 3+ 範例：直接用當天的 SD problem（URL Shortener, Chat System...）
+- **學生跑 full 4-step framework**：
+  1. **Clarify requirements** — functional + non-functional（2 min）
+  2. **High-level design** — 8-block skeleton + API + data model（3 min）
+  3. **Deep dive** — 聚焦今天學的 component，展示理解深度（3-5 min）
+  4. **Scale & trade-offs** — bottleneck, failure mode, monitoring（2-3 min）
+- **AI 評分重點**（每次至少給 2 個 feedback）：
+  - ✅ 有沒有 think aloud
+  - ✅ Trade-off 有沒有講 why（不只是列選項）
+  - ✅ 有沒有用到今天學的 building block
+  - ✅ 有沒有主動提 DevOps angle（monitoring, alerting）
+- **注意**：Phase 1 初期知識量不夠，deep dive 只聚焦已學的部分是正常的。隨著學的 building blocks 越多，設計會越來越完整。
+
+### G. 整理筆記（5 min）
 
 - 依 `CURRICULUM.md` 的 **Notes Template** 格式寫筆記
 - 筆記放在 `notes/dayXX-*.md`
 - **必須包含 `🔴 My Mistakes & Misconceptions` section**（見下方格式）
 - 筆記中記錄我在 Step C 答錯或卡住的地方
 
-### G. 更新進度 + 預覽明天（5 min）
+### H. 更新進度 + 預覽明天（5 min）
 
 - 更新 `docs/curriculum-roadmap.md` 對應 Day 的 Done 欄位：⬜ → ✅
 - 更新 `CURRICULUM.md` 對應的 checkbox：`- [ ]` → `- [x]`
