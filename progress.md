@@ -12,9 +12,9 @@
 |-------|-------|
 | **Start date** | 2026-03-04 |
 | **Current phase** | Phase 1 |
-| **Current day** | Day 8 |
+| **Current day** | Day 9 |
 | **Language mode** | Bilingual (繁中 + English) |
-| **Session count** | 7 |
+| **Session count** | 8 |
 | **Last weekly review** | — (not yet) |
 
 ---
@@ -23,12 +23,12 @@
 
 | Field | Value |
 |-------|-------|
-| **Day** | Day 8 |
+| **Day** | Day 9 |
 | **Topic** | Database Selection |
-| **Step** | B (Introduction) |
-| **Chunks completed** | — (not started yet) |
-| **Chunks remaining** | — |
-| **Next action** | Start Day 8 from Step A (Review) — first session with sd-coach |
+| **Step** | C (Core Teaching) |
+| **Chunks completed** | Day 8: all 6 chunks ✅; Day 9: WAL ✅ |
+| **Chunks remaining** | Day 9: Read Replicas (Feynman Gate Recall pending), Consistency trade-offs, Data Model Design Template, Observability Mini → then PoC, Simon Drill, Interview Drill, Notes |
+| **Next action** | Resume Day 9 Step C — Read Replicas chunk, student needs to answer Feynman Gate Recall first. Weekly Review due after this session (session 8, last review = never). |
 
 ---
 
