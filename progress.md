@@ -25,10 +25,10 @@
 |-------|-------|
 | **Day** | Day 9 |
 | **Topic** | Database Selection |
-| **Step** | C (Core Teaching) |
-| **Chunks completed** | Day 8: all 6 chunks ✅; Day 9: WAL ✅ |
-| **Chunks remaining** | Day 9: Read Replicas (Feynman Gate Recall pending), Consistency trade-offs, Data Model Design Template, Observability Mini → then PoC, Simon Drill, Interview Drill, Notes |
-| **Next action** | Resume Day 9 Step C — Read Replicas chunk, student needs to answer Feynman Gate Recall first. Weekly Review due after this session (session 8, last review = never). |
+| **Step** | G (Notes) |
+| **Chunks completed** | Day 8: all 6 chunks ✅; Day 9: all 5 chunks ✅ (all gates passed) |
+| **Chunks remaining** | Notes, Progress Update |
+| **Next action** | Resume Day 9 Step G — Notes. Mistakes to record: (1) LSM-tree 讀寫搞反 (2) Denormalization 跟 Normalization 搞混 (3) Consistency Trade-offs 空白 (4) Interview Drill 一開始選 NoSQL 被 "大量資料" 誤導 (5) 忘了 Scope Negotiation. Interview Drill score: 2/3. Weekly Review due next session (session 8, last review = never). |
 
 ---
 
@@ -42,7 +42,7 @@
 | 3 | 4-Step Framework | 🟢 | Phase 0 Gate | |
 | 4-5 | Load Balancer | 🟢 | — | PoC complete (Nginx Docker) |
 | 6-7 | Caching & CDN | 🟢 | — | PoC complete (Redis) |
-| 8-9 | Database Selection | ⬜ | — | Not started |
+| 8-9 | Database Selection | 🟡 | — | Day 8 chunks done, Day 9 chunks done (teaching only). PoC + drills pending. |
 | 10-11 | Message Queue | ⬜ | — | |
 | 12-13 | API Design | ⬜ | — | |
 | 14 | Security & Auth | ⬜ | — | |
