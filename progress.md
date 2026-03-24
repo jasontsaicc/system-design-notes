@@ -14,21 +14,14 @@
 | **Current phase** | Phase 1 |
 | **Current day** | Day 9 |
 | **Language mode** | Bilingual (繁中 + English) |
-| **Session count** | 8 |
+| **Session count** | 9 |
 | **Last weekly review** | — (not yet) |
 
 ---
 
 ## Current Session (Breakpoint)
 
-| Field | Value |
-|-------|-------|
-| **Day** | Day 9 |
-| **Topic** | Database Selection |
-| **Step** | G (Notes) |
-| **Chunks completed** | Day 8: all 6 chunks ✅; Day 9: all 5 chunks ✅ (all gates passed) |
-| **Chunks remaining** | Notes, Progress Update |
-| **Next action** | Resume Day 9 Step G — Notes. Mistakes to record: (1) LSM-tree 讀寫搞反 (2) Denormalization 跟 Normalization 搞混 (3) Consistency Trade-offs 空白 (4) Interview Drill 一開始選 NoSQL 被 "大量資料" 誤導 (5) 忘了 Scope Negotiation. Interview Drill score: 2/3. Weekly Review due next session (session 8, last review = never). |
+> No active breakpoint — Day 9 completed normally.
 
 ---
 
@@ -42,7 +35,7 @@
 | 3 | 4-Step Framework | 🟢 | Phase 0 Gate | |
 | 4-5 | Load Balancer | 🟢 | — | PoC complete (Nginx Docker) |
 | 6-7 | Caching & CDN | 🟢 | — | PoC complete (Redis) |
-| 8-9 | Database Selection | 🟡 | — | Day 8 chunks done, Day 9 chunks done (teaching only). PoC + drills pending. |
+| 8-9 | Database Selection | 🟡 | — | All chunks ✅, PoC ✅, Drills ✅. 5 mistakes recorded. Interview Drill 2/3. |
 | 10-11 | Message Queue | ⬜ | — | |
 | 12-13 | API Design | ⬜ | — | |
 | 14 | Security & Auth | ⬜ | — | |
@@ -76,7 +69,7 @@
 
 | Session | Day | Topic | Score | Details |
 |---------|-----|-------|-------|---------|
-| | | | | (migrated from pre-skill — no scorecard data) |
+| 8 | 8-9 | Database Selection | 2/3 | ❌ Scope Negotiation, initially chose NoSQL based on data volume (wrong reasoning) |
 
 ---
 
@@ -91,6 +84,11 @@
 | 4 | 4-5 | Load Balancer | Thought 8.8.8.8 is ISP DNS (it's Google Public DNS) | ❌ Unresolved |
 | 4 | 4-5 | Load Balancer | Confused sticky sessions and Redis external store as same approach (opposite strategies) | ❌ Unresolved |
 | 4 | 4-5 | Load Balancer | Missed sticky session risk: uneven load distribution | ❌ Unresolved |
+| 9 | 8-9 | Database Selection | LSM-tree 讀寫搞反（以為是 read-optimized） | ❌ Unresolved |
+| 9 | 8-9 | Database Selection | Denormalization 跟 Normalization 搞混 | ❌ Unresolved |
+| 9 | 8-9 | Database Selection | Consistency Trade-offs 空白（不知道三種 model） | ❌ Unresolved |
+| 9 | 8-9 | Database Selection | 看到「大量資料」就選 NoSQL（data volume ≠ DB 選擇關鍵） | ❌ Unresolved |
+| 9 | 8-9 | Database Selection | Interview Drill 忘了 Scope Negotiation | ❌ Unresolved |
 
 ---
 
@@ -99,6 +97,8 @@
 | Topic | One-Liner |
 |-------|-----------|
 | Load Balancer | A Load Balancer distributes traffic across multiple backend servers to achieve high availability, horizontal scalability, and zero-downtime deployments. |
+| Caching & CDN | Cache puts frequently-used data in a faster store like Redis in front of the DB, reducing latency and DB load by serving most requests without hitting the database. |
+| Database Selection | Database selection is choosing the right storage engine — SQL, NoSQL, or NewSQL — based on access patterns, relationship complexity, and consistency requirements, so the database fits the workload rather than forcing the workload to fit the database. |
 
 ---
 
