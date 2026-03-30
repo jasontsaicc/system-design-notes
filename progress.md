@@ -14,8 +14,8 @@
 | **Current phase** | Phase 1 |
 | **Current day** | Day 9 |
 | **Language mode** | Bilingual (繁中 + English) |
-| **Session count** | 9 |
-| **Last weekly review** | — (not yet) |
+| **Session count** | 10 |
+| **Last weekly review** | 10 |
 
 ---
 
@@ -33,9 +33,9 @@
 | 1 | SD Interview Rubric | 🟢 | — | |
 | 2 | Back-of-Envelope Estimation | 🟢 | — | |
 | 3 | 4-Step Framework | 🟢 | Phase 0 Gate | |
-| 4-5 | Load Balancer | 🟢 | — | PoC complete (Nginx Docker) |
-| 6-7 | Caching & CDN | 🟢 | — | PoC complete (Redis) |
-| 8-9 | Database Selection | 🟡 | — | All chunks ✅, PoC ✅, Drills ✅. 5 mistakes recorded. Interview Drill 2/3. |
+| 4-5 | Load Balancer | 🟡 | — | Weekly Review 1/4 recall. 5 unresolved mistakes. Downgraded from 🟢. |
+| 6-7 | Caching & CDN | 🔴 | — | Weekly Review 0/4 recall. Drill partial recovery. Downgraded from 🟢. |
+| 8-9 | Database Selection | 🟡 | — | Weekly Review 3/4 recall. B-tree/LSM resolved. Trade-off axis confusion persists. |
 | 10-11 | Message Queue | ⬜ | — | |
 | 12-13 | API Design | ⬜ | — | |
 | 14 | Security & Auth | ⬜ | — | |
@@ -70,6 +70,7 @@
 | Session | Day | Topic | Score | Details |
 |---------|-----|-------|-------|---------|
 | 8 | 8-9 | Database Selection | 2/3 | ❌ Scope Negotiation, initially chose NoSQL based on data volume (wrong reasoning) |
+| 10 | WR1 | Weekly Review (DB/LB/Cache) | DB 3/4, LB 1/4, Cache 0/4 | First weekly review. LB 🟢→🟡, Cache 🟢→🔴. 2 mistakes resolved (DNS limits, LSM-tree). |
 
 ---
 
@@ -80,11 +81,11 @@
 | 4 | 4-5 | Load Balancer | Said "least robin" — confused RR and Least Connections names | ❌ Unresolved |
 | 4 | 4-5 | Load Balancer | Thought Weighted RR is for different request processing times (it's for different server specs) | ❌ Unresolved |
 | 4 | 4-5 | Load Balancer | Couldn't recall LB algorithm names during Simon Drill | ❌ Unresolved |
-| 4 | 4-5 | Load Balancer | Forgot DNS-based LB limitations (TTL stale IP, no real-time health check) | ❌ Unresolved |
+| 4 | 4-5 | Load Balancer | Forgot DNS-based LB limitations (TTL stale IP, no real-time health check) | ✅ Resolved (WR1) |
 | 4 | 4-5 | Load Balancer | Thought 8.8.8.8 is ISP DNS (it's Google Public DNS) | ❌ Unresolved |
 | 4 | 4-5 | Load Balancer | Confused sticky sessions and Redis external store as same approach (opposite strategies) | ❌ Unresolved |
 | 4 | 4-5 | Load Balancer | Missed sticky session risk: uneven load distribution | ❌ Unresolved |
-| 9 | 8-9 | Database Selection | LSM-tree 讀寫搞反（以為是 read-optimized） | ❌ Unresolved |
+| 9 | 8-9 | Database Selection | LSM-tree 讀寫搞反（以為是 read-optimized） | ✅ Resolved (WR1) |
 | 9 | 8-9 | Database Selection | Denormalization 跟 Normalization 搞混 | ❌ Unresolved |
 | 9 | 8-9 | Database Selection | Consistency Trade-offs 空白（不知道三種 model） | ❌ Unresolved |
 | 9 | 8-9 | Database Selection | 看到「大量資料」就選 NoSQL（data volume ≠ DB 選擇關鍵） | ❌ Unresolved |
