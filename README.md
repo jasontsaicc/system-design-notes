@@ -55,7 +55,7 @@ docs/       # Curriculum roadmap and planning review
 
 ## Tech Stack
 
-Go, Docker, Nginx, Redis (upcoming)
+Go, Docker, Nginx, Redis
 
 ## Detailed Planning
 
