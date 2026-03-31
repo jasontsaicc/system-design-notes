@@ -14,14 +14,19 @@
 | **Current phase** | Phase 1 |
 | **Current day** | Day 9 |
 | **Language mode** | Bilingual (繁中 + English) |
-| **Session count** | 10 |
+| **Session count** | 11 |
 | **Last weekly review** | 10 |
 
 ---
 
 ## Current Session (Breakpoint)
 
-> No active breakpoint — Day 9 completed normally.
+> **Session 11 — Day 10: Message Queue & Async Processing**
+> **Stopped at:** Step C, Chunk 5 (Idempotency) — teaching complete, Feynman Gate question pending (小杰's shortcut question unanswered)
+> **Chunks completed:** ✅ 1-4 (Why Async, Core Components, SQS/Kafka/RabbitMQ, Delivery Semantics)
+> **Chunks remaining:** ☐ 5 Feynman Gate, ☐ 6 Observability Mini
+> **Steps remaining:** D (Hands-On), E (Simon Drill), F (Interview Drill), G (Notes), H (Progress Update)
+> **Step A resolved mistakes:** Denormalization/Normalization, "大量資料就選NoSQL"
 
 ---
 
@@ -86,9 +91,9 @@
 | 4 | 4-5 | Load Balancer | Confused sticky sessions and Redis external store as same approach (opposite strategies) | ❌ Unresolved |
 | 4 | 4-5 | Load Balancer | Missed sticky session risk: uneven load distribution | ❌ Unresolved |
 | 9 | 8-9 | Database Selection | LSM-tree 讀寫搞反（以為是 read-optimized） | ✅ Resolved (WR1) |
-| 9 | 8-9 | Database Selection | Denormalization 跟 Normalization 搞混 | ❌ Unresolved |
+| 9 | 8-9 | Database Selection | Denormalization 跟 Normalization 搞混 | ✅ Resolved (S11) |
 | 9 | 8-9 | Database Selection | Consistency Trade-offs 空白（不知道三種 model） | ❌ Unresolved |
-| 9 | 8-9 | Database Selection | 看到「大量資料」就選 NoSQL（data volume ≠ DB 選擇關鍵） | ❌ Unresolved |
+| 9 | 8-9 | Database Selection | 看到「大量資料」就選 NoSQL（data volume ≠ DB 選擇關鍵） | ✅ Resolved (S11) |
 | 9 | 8-9 | Database Selection | Interview Drill 忘了 Scope Negotiation | ❌ Unresolved |
 
 ---
@@ -100,6 +105,32 @@
 | Load Balancer | A Load Balancer distributes traffic across multiple backend servers to achieve high availability, horizontal scalability, and zero-downtime deployments. |
 | Caching & CDN | Cache puts frequently-used data in a faster store like Redis in front of the DB, reducing latency and DB load by serving most requests without hitting the database. |
 | Database Selection | Database selection is choosing the right storage engine — SQL, NoSQL, or NewSQL — based on access patterns, relationship complexity, and consistency requirements, so the database fits the workload rather than forcing the workload to fit the database. |
+
+---
+
+## RPG Profile
+
+| Field | Value |
+|-------|-------|
+| **Title** | ⚙️ Systems Engineer |
+| **Current streak** | 1 |
+| **Longest streak** | 1 |
+| **Last session date** | 2026-03-31 |
+| **Last story summary** | 促銷活動流量暴增，Karen 衝進來說用戶被重複扣款。小杰想多開 instance 解決，小球帶你學 Message Queue。 |
+
+---
+
+## Achievements
+
+| ID | Name | Status | Date |
+|----|------|--------|------|
+| M1 | First Steps | 🏆 | retroactive |
+| M2 | Framework Forged | 🏆 | retroactive |
+| C1 | First Blood | 🏆 | retroactive |
+| C4 | Comeback Kid | 🏆 | retroactive |
+| S2 | Weekly Warrior | 🏆 | retroactive |
+
+**Total: 5/25**
 
 ---
 
