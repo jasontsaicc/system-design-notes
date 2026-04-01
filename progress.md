@@ -14,19 +14,18 @@
 | **Current phase** | Phase 1 |
 | **Current day** | Day 9 |
 | **Language mode** | Bilingual (繁中 + English) |
-| **Session count** | 11 |
+| **Session count** | 12 |
 | **Last weekly review** | 10 |
 
 ---
 
 ## Current Session (Breakpoint)
 
-> **Session 11 — Day 10: Message Queue & Async Processing**
-> **Stopped at:** Step C, Chunk 5 (Idempotency) — teaching complete, Feynman Gate question pending (小杰's shortcut question unanswered)
-> **Chunks completed:** ✅ 1-4 (Why Async, Core Components, SQS/Kafka/RabbitMQ, Delivery Semantics)
-> **Chunks remaining:** ☐ 5 Feynman Gate, ☐ 6 Observability Mini
-> **Steps remaining:** D (Hands-On), E (Simon Drill), F (Interview Drill), G (Notes), H (Progress Update)
-> **Step A resolved mistakes:** Denormalization/Normalization, "大量資料就選NoSQL"
+> **Session 12 — Day 10: Message Queue & Async Processing (cont.)**
+> **Stopped at:** Step F (Interview Drill) — problem given but student hasn't started 4-step framework yet
+> **Drill problem:** "Design an order processing system for flash sale spikes without duplicate charges"
+> **Completed this session:** Chunk 5-6 Feynman Gates ✅, Step D Design Exercise ✅, Step E Simon Drill ✅
+> **Steps remaining:** F (Interview Drill), G (Notes 補完), H (Progress Update)
 
 ---
 
@@ -95,6 +94,9 @@
 | 9 | 8-9 | Database Selection | Consistency Trade-offs 空白（不知道三種 model） | ❌ Unresolved |
 | 9 | 8-9 | Database Selection | 看到「大量資料」就選 NoSQL（data volume ≠ DB 選擇關鍵） | ✅ Resolved (S11) |
 | 9 | 8-9 | Database Selection | Interview Drill 忘了 Scope Negotiation | ❌ Unresolved |
+| 12 | 10 | Message Queue | Simon Drill: Why Async 只記得 fast response，漏 decoupling/buffering | ❌ Unresolved |
+| 12 | 10 | Message Queue | Simon Drill: delivery semantics 名稱講不完整 (most/least/excely) | ❌ Unresolved |
+| 12 | 10 | Message Queue | 設計練習不知道怎麼起手（需要拆成小問題逐步推） | ❌ Unresolved |
 
 ---
 
@@ -113,9 +115,9 @@
 | Field | Value |
 |-------|-------|
 | **Title** | ⚙️ Systems Engineer |
-| **Current streak** | 1 |
-| **Longest streak** | 1 |
-| **Last session date** | 2026-03-31 |
+| **Current streak** | 2 |
+| **Longest streak** | 2 |
+| **Last session date** | 2026-04-01 |
 | **Last story summary** | 促銷活動流量暴增，Karen 衝進來說用戶被重複扣款。小杰想多開 instance 解決，小球帶你學 Message Queue。 |
 
 ---
