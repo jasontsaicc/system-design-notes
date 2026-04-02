@@ -14,18 +14,14 @@
 | **Current phase** | Phase 1 |
 | **Current day** | Day 9 |
 | **Language mode** | Bilingual (繁中 + English) |
-| **Session count** | 12 |
+| **Session count** | 13 |
 | **Last weekly review** | 10 |
 
 ---
 
 ## Current Session (Breakpoint)
 
-> **Session 12 — Day 10: Message Queue & Async Processing (cont.)**
-> **Stopped at:** Step F (Interview Drill) — problem given but student hasn't started 4-step framework yet
-> **Drill problem:** "Design an order processing system for flash sale spikes without duplicate charges"
-> **Completed this session:** Chunk 5-6 Feynman Gates ✅, Step D Design Exercise ✅, Step E Simon Drill ✅
-> **Steps remaining:** F (Interview Drill), G (Notes 補完), H (Progress Update)
+> No active breakpoint — last session completed normally.
 
 ---
 
@@ -40,7 +36,7 @@
 | 4-5 | Load Balancer | 🟡 | — | Weekly Review 1/4 recall. 5 unresolved mistakes. Downgraded from 🟢. |
 | 6-7 | Caching & CDN | 🔴 | — | Weekly Review 0/4 recall. Drill partial recovery. Downgraded from 🟢. |
 | 8-9 | Database Selection | 🟡 | — | Weekly Review 3/4 recall. B-tree/LSM resolved. Trade-off axis confusion persists. |
-| 10-11 | Message Queue | ⬜ | — | |
+| 10-11 | Message Queue | 🟡 | — | Concepts understood with guidance. Interview Drill 3/3 but needed help with requirements framework, inventory placement, idempotency architecture. |
 | 12-13 | API Design | ⬜ | — | |
 | 14 | Security & Auth | ⬜ | — | |
 | 15-16 | Consistent Hashing | ⬜ | Phase 1 Gate | |
@@ -75,6 +71,7 @@
 |---------|-----|-------|-------|---------|
 | 8 | 8-9 | Database Selection | 2/3 | ❌ Scope Negotiation, initially chose NoSQL based on data volume (wrong reasoning) |
 | 10 | WR1 | Weekly Review (DB/LB/Cache) | DB 3/4, LB 1/4, Cache 0/4 | First weekly review. LB 🟢→🟡, Cache 🟢→🔴. 2 mistakes resolved (DNS limits, LSM-tree). |
+| 13 | 10 | Message Queue (Interview Drill) | 3/3 | ✅ Think Aloud, ✅ Scope Negotiation, ✅ Used MQ. Needed guidance on requirements framework and idempotency placement. |
 
 ---
 
@@ -97,6 +94,11 @@
 | 12 | 10 | Message Queue | Simon Drill: Why Async 只記得 fast response，漏 decoupling/buffering | ❌ Unresolved |
 | 12 | 10 | Message Queue | Simon Drill: delivery semantics 名稱講不完整 (most/least/excely) | ❌ Unresolved |
 | 12 | 10 | Message Queue | 設計練習不知道怎麼起手（需要拆成小問題逐步推） | ❌ Unresolved |
+| 13 | 10 | Message Queue | 忘了 Functional / Non-Functional / Scope 的定義（Step 1 基礎） | ❌ Unresolved |
+| 13 | 10 | Message Queue | Inventory check 放 Queue 之後（沒考慮 user 等半天才知道沒貨的體驗） | ❌ Unresolved |
+| 13 | 10 | Message Queue | 把 Idempotency 當獨立 service（其實是 Order Service 裡的邏輯） | ❌ Unresolved |
+| 13 | 10 | Message Queue | 把 Redis DECR（庫存 pre-check）跟 Idempotency check（防重複）搞混 | ❌ Unresolved |
+| 13 | 10 | Message Queue | 說 at-least-once 是解決重複扣款的方法（at-least-once 是問題來源，idempotency 才是解法） | ❌ Unresolved |
 
 ---
 
@@ -107,6 +109,7 @@
 | Load Balancer | A Load Balancer distributes traffic across multiple backend servers to achieve high availability, horizontal scalability, and zero-downtime deployments. |
 | Caching & CDN | Cache puts frequently-used data in a faster store like Redis in front of the DB, reducing latency and DB load by serving most requests without hitting the database. |
 | Database Selection | Database selection is choosing the right storage engine — SQL, NoSQL, or NewSQL — based on access patterns, relationship complexity, and consistency requirements, so the database fits the workload rather than forcing the workload to fit the database. |
+| Message Queue | A Message Queue decouples producers from consumers, enabling async processing, peak traffic buffering, and failure resilience through retry and dead letter queues — the key is pairing at-least-once delivery with idempotency to prevent duplicate processing. |
 
 ---
 
@@ -115,10 +118,10 @@
 | Field | Value |
 |-------|-------|
 | **Title** | ⚙️ Systems Engineer |
-| **Current streak** | 2 |
-| **Longest streak** | 2 |
-| **Last session date** | 2026-04-01 |
-| **Last story summary** | 促銷活動流量暴增，Karen 衝進來說用戶被重複扣款。小杰想多開 instance 解決，小球帶你學 Message Queue。 |
+| **Current streak** | 3 🔥 |
+| **Longest streak** | 3 |
+| **Last session date** | 2026-04-02 |
+| **Last story summary** | 回到 flash sale 戰場，完成 Interview Drill — 設計了完整的訂單處理系統，從 Redis 擋庫存到 Queue 削峰到 idempotency 防重複扣款。 |
 
 ---
 
@@ -131,8 +134,10 @@
 | C1 | First Blood | 🏆 | retroactive |
 | C4 | Comeback Kid | 🏆 | retroactive |
 | S2 | Weekly Warrior | 🏆 | retroactive |
+| E1 | Perfect Drill | 🏆 | 2026-04-02 |
+| S1 | Three-peat | 🏆 | 2026-04-02 |
 
-**Total: 5/25**
+**Total: 7/25**
 
 ---
 
