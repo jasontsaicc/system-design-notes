@@ -1,3 +1,10 @@
+> **⚠️ ARCHIVED (2026-07-10).** Learner state, notes, and Go PoCs moved into the
+> [`learning-coaches`](https://github.com/jasontsaicc/learning-coaches) monorepo:
+> live progress in `workspaces/sd/` (engine schema; pre-migration originals verbatim in
+> `workspaces/sd/archive/pre-migration/`), notes and projects in `portfolio/sd/`.
+> Full history was merged there via git subtree (`legacy/sd/notes/`); this repo's final
+> state is tagged `pre-migration`. Do not update this repo.
+
 # System Design Notes
 
 Structured system design study with hands-on PoC projects — from a DevOps engineer's perspective.
